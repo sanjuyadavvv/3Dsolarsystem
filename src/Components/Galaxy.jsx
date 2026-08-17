@@ -57,8 +57,7 @@ function Galaxy() {
         Math.pow(Math.random(), verticalPower) *
         (Math.random() < 0.5 ? 1 : -1) *
         randomness *
-        r *
-        0.3;
+        r;
       const randomZ =
         Math.pow(Math.random(), horizontalPower) *
         (Math.random() < 0.5 ? 1 : -1) *
@@ -109,7 +108,7 @@ function Galaxy() {
   });
 
   return (
-    <points ref={pointsRef}>
+    <points ref={pointsRef}   position={[1, 0, -1.4]}>
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
