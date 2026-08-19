@@ -47,7 +47,7 @@ useEffect(()=>{
 
   return (
     <group position={[4, 0, 0]} castShadow receiveShadow>
-      <primitive object={scene} scale={0.4}/>
+      <primitive object={scene} scale={0.1}/>
       <MoonOrbit />
     </group>
   );
