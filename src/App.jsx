@@ -18,7 +18,7 @@ return(
     <EffectComposer>
     <Bloom
         intensity={2}
-        luminanceThreshold={1.2}
+        luminanceThreshold={0.3}
         luminanceSmoothing={0.9}
         mipmapBlur
       />
