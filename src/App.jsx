@@ -5,6 +5,9 @@ import Sun from "./Components/Sun";
 import Earth from "./Components/Earth";
 import EarthOrbit from "./Components/EarthOrbit";
 import SolarSystem from "./Components/SolarSystem";
+import { EffectComposer ,Bloom} from "@react-three/postprocessing";
+
+// import Waves from "./Components/WaterWaves";
 function App(){
 return(
   <Canvas camera={{position:[0,5,10],fov:50}} shadows>
@@ -12,6 +15,16 @@ return(
     <ambientLight intensity={1}/>
       {/* <MilkyWay/> */}
    <SolarSystem/>
+    <EffectComposer>
+    <Bloom
+        intensity={2}
+        luminanceThreshold={1.2}
+        luminanceSmoothing={0.9}
+        mipmapBlur
+      />
+  </EffectComposer>
+<OrbitControls/>
+
   </Canvas>
 )
 }
